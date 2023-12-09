@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 class="h2">&#10084;&#10084;&#10084;TO DO &#10084;&#10084;&#10084;</h2>
+    <input id="input">
+    <button class="a1" onclick="add()">ADD</button>
+    <ul id="list-container"></ul>
+    <script>
+        var ul = document.getElementById("list-container");
+        var input = document.getElementById("input");
+
+        function add() {
+            var listItem = document.createElement('li');
+            listItem.style.marginTop = "20px";
+
+            var completeButton = document.createElement('button');
+            completeButton.textContent = 'Complete';
+            completeButton.className = 'complete';
+            completeButton.onclick = function () {
+                toggleComplete(listItem, completeButton);
+            };
+
+            var deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.className = 'delete';
+            deleteButton.onclick = function () {
+                deleteItem(listItem);
+            };
+
+            listItem.appendChild(document.createTextNode(input.value + ' '));
+            listItem.appendChild(completeButton);
+            listItem.appendChild(document.createTextNode(' '));
+            listItem.appendChild(deleteButton);
+
+            ul.appendChild(listItem);
+        }
+
+        function toggleComplete(item, button) {
+            item.classList.toggle('completed');
+            button.style.backgroundColor = item.classList.contains('completed') ? 'green' : '';
+        }
+
+        function deleteItem(item) {
+            item.remove();
+        }
+    </script>
+</body>
+</html>
