@@ -36,8 +36,8 @@ body{
     background-color: #01fd09;
    }
    .complete:active {
-    background-color: #2AD11A1;
-    box-shadow: 0 5px #666;
+    background-color: #2ad11a;
+    box-shadow : 0px 5px #666;
     
    }
    .complete{
