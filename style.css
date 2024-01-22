@@ -9,11 +9,14 @@ body{
     margin-top: 70px
 }
 #input{
-    margin-top: 0.5cm;
-    margin-left: 13cm;
+    margin-top: 0.6cm;
+    margin-left: 11cm;
     border-style: groove;
     border-color: black;
-width: 5cm;
+    width: 10cm;
+    height: 22px;
+   text-align: center;
+   color: rgb(0, 0, 0);
 
 }
    
@@ -30,10 +33,10 @@ width: 5cm;
     margin-left: 0.3cm;
    }
    .complete:hover{
-    background-color: #3e8e41;
+    background-color: #01fd09;
    }
    .complete:active {
-    background-color: #3e8e41;
+    background-color: #2AD11A1;
     box-shadow: 0 5px #666;
     
    }
@@ -42,11 +45,21 @@ width: 5cm;
    }
 
    .delete:hover{
-background-color: red;
+background-color: #F94252;
    }
    .delete{ border-radius: 5px;
    }
-.a1{
-    border-radius: 3px;
+   .a{
+    margin: 12px 1 2px;
+   }
+.a1:hover{
+    background-color: #898181;
+    border-radius: 30px;
+    color: rgb(16, 16, 16);
+    
 }
-   
+#input:hover{
+    background-color: #898181;
+    border-radius: 30px;
+    cursor: pointer;
+}
